@@ -17,7 +17,7 @@ const Layout: FC<{}> = ({ children }) => {
   return (
     <div className="max-w-screen-lg min-h-screen mx-auto flex flex-col">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <main className="flex-grow">{children}</main>
+      <main className="flex-grow flex items-stretch">{children}</main>
       <footer className="border-t-2 flex justify-center py-4">
         <small>&copy; {new Date().getFullYear()}, MoneyOut.org</small>
       </footer>
