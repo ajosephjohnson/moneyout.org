@@ -1,12 +1,13 @@
 import React, { FC } from 'react';
 
 import Layout from '../components/layout';
+import PageContent from '../components/page-content';
 import SEO from '../components/seo';
 
 const IndexPage: FC<{}> = () => (
   <Layout>
     <SEO title="Home" />
-    <div className="flex flex-col items-center justify-center max-w-md mx-auto my-7 text-base">
+    <PageContent>
       <p>Hi, My name is Alan &#128075;</p>
       <br />
       <p>
@@ -41,7 +42,7 @@ const IndexPage: FC<{}> = () => (
       </p>
       <br />
       <p>Hope you enjoy!</p>
-    </div>
+    </PageContent>
   </Layout>
 );
 
