@@ -7,19 +7,21 @@ const CapitolIcon: FC<{}> = () => {
     query {
       placeholderImage: file(relativePath: { eq: "capitol-icon.png" }) {
         childImageSharp {
-          fluid(maxWidth: 60) {
-            ...GatsbyImageSharpFluid
+          fixed(width: 56, height: 56) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
     }
   `);
 
-  if (!data?.placeholderImage?.childImageSharp?.fluid) {
+  if (!data?.placeholderImage?.childImageSharp?.fixed) {
     return <div>Picture not found</div>;
   }
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />;
+  return (
+    <Img loading="eager" fixed={data.placeholderImage.childImageSharp.fixed} />
+  );
 };
 
 export default CapitolIcon;

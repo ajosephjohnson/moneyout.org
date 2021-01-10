@@ -6,7 +6,7 @@ import CapitolIcon from './capitol-icon';
 const Header: FC<{ siteTitle: string }> = ({ siteTitle }) => (
   <header className="h-20 border-b-2 flex">
     <Link to="/" className="h-full flex items-center w-max p-3 hover:underline">
-      <div className="w-14">
+      <div className="h-14">
         <CapitolIcon />
       </div>
       <h1 className="text-2xl ml-3 pt-1">{siteTitle}</h1>
