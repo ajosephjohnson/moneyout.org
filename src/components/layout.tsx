@@ -15,21 +15,13 @@ const Layout: FC<{}> = ({ children }) => {
   `);
 
   return (
-    <>
+    <div className="max-w-screen-lg min-h-screen mx-auto flex flex-col">
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div>
-        <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+      <main className="flex-grow">{children}</main>
+      <footer className="border-t-2 flex justify-center py-4">
+        <small>&copy; {new Date().getFullYear()}, MoneyOut.org</small>
+      </footer>
+    </div>
   );
 };
 
