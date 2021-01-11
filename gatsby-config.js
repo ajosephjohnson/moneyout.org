@@ -49,7 +49,13 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/capitol-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/capitol-icon.png`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [process.env.GA_TRACKING_ID],
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
