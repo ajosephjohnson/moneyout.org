@@ -1,13 +1,14 @@
 import React, { FC } from 'react';
 
 import Layout from '../components/layout';
+import NewTabLink from '../components/new-tab-link';
 import PageContent from '../components/page-content';
 import SEO from '../components/seo';
 
 const IndexPage: FC<{}> = () => (
   <Layout>
     <SEO title="Home" />
-    <PageContent>
+    <PageContent centered>
       <p>Hi, My name is Alan &#128075;</p>
       <br />
       <p>
@@ -30,14 +31,9 @@ const IndexPage: FC<{}> = () => (
       <p>
         Know of a great resource that I am missing? Have a question burning a
         hole in your brain? Reach me at{' '}
-        <a
-          className="underline"
-          href="mailto:ajosephjohnson@gmail.com"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <NewTabLink url="mailto:ajosephjohnson@gmail.com">
           ajosephjohnson@gmail.com
-        </a>
+        </NewTabLink>
         .
       </p>
       <br />

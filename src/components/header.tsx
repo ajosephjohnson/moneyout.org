@@ -15,7 +15,7 @@ const Header: FC<{ siteTitle: string }> = ({ siteTitle }) => (
         <CapitolIcon />
         <h1 className="text-2xl ml-3">{siteTitle}</h1>
       </Link>
-      <div className="w-full flex justify-end">
+      <div className="w-full flex justify-end mr-3">
         {navSections.map(navSection => (
           <Link
             key={navSection}

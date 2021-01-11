@@ -1,7 +1,11 @@
 import React, { FC } from 'react';
 
-const PageContent: FC<{}> = ({ children }) => (
-  <div className="flex flex-col items-center justify-center max-w-md mx-auto my-7 pb-8">
+const PageContent: FC<{ centered?: boolean }> = ({ children, centered }) => (
+  <div
+    className={`flex flex-col mx-auto pb-8${
+      centered ? ' items-center justify-center max-w-md my-7' : ''
+    }`}
+  >
     {children}
   </div>
 );
